@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "base_url": "https://office-hours-buildathon.palaceresorts.com",
+    "generated_at": "2025-10-21T12:10:00Z",
+    "scenario": "pareja_romantica_leblanc_cancun"
+  },
+  "client": {
+    "nombre": "Daniela",
+    "apellidos": "Ríos Álvarez",
+    "email": "daniela.rios+demo@ejemplo.mx",
+    "telefono": "+52 55 3890 4721",
+    "tiene_reservacion": false,
+    "tipo_huesped": "pareja_romantica",
+    "motivo": "nueva_reservacion",
+    "pais": "MX",
+    "resort": "leblanc_cancun"
+  },
+  "apis": {
+    "health": {
+      "request": {
+        "method": "GET",
+        "url": "https://office-hours-buildathon.palaceresorts.com/health"
+      },
+      "response": {
+        "status": "healthy",
+        "version": "1.0.0",
+        "data": {
+          "properties": 8,
+          "reservations": 3920451,
+          "channels": 16,
+          "uptime": "72h 10m"
+        }
+      }
+    },
+    "property": {
+      "request": {
+        "method": "GET",
+        "url": "https://office-hours-buildathon.palaceresorts.com/api/properties/leblanc_cancun"
+      },
+      "response": {
+        "id": "leblanc_cancun",
+        "nombre": "Le Blanc Spa Resort Cancún",
+        "ubicacion": {
+          "ciudad": "Cancún",
+          "pais": "MX"
+        },
+        "tipos_habitacion": [
+          "deluxe_ocean_view",
+          "luxury_ocean_front",
+          "penthouse_suite"
+        ]
+      }
+    },
+    "availability": {
+      "request": {
+        "method": "POST",
+        "url": "https://office-hours-buildathon.palaceresorts.com/api/availability",
+        "body": {
+          "property_id": "leblanc_cancun",
+          "check_in_date": "2026-02-14",
+          "check_out_date": "2026-02-21",
+          "room_type": "luxury_ocean_front"
+        }
+      },
+      "response": {
+        "available": true,
+        "remaining": 4,
+        "property_id": "leblanc_cancun",
+        "room_type": "luxury_ocean_front"
+      }
+    },
+    "pricing": {
+      "request": {
+        "method": "POST",
+        "url": "https://office-hours-buildathon.palaceresorts.com/api/pricing",
+        "body": {
+          "property_id": "leblanc_cancun",
+          "room_type": "luxury_ocean_front",
+          "check_in_date": "2026-02-14",
+          "check_out_date": "2026-02-21",
+          "num_guests": 2,
+          "customer_segment": "seg_romantic_couple",
+          "lifetime_value_usd": 50000
+        }
+      },
+      "response": {
+        "dates": {
+          "num_nights": 7
+        },
+        "base_pricing": {
+          "base_price_per_night_usd": 1450.0
+        },
+        "final_pricing": {
+          "average_per_night_usd": 1285.0
+        },
+        "discounts": {
+          "loyalty": {
+            "amount_usd": 450.0
+          }
+        },
+        "summary": {
+          "total_price_usd": 8995.0,
+          "savings_usd": 600.0
+        }
+      }
+    }
+  }
+}

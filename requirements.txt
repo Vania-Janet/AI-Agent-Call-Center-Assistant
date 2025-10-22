@@ -1,0 +1,24 @@
+# MCP and async support
+mcp
+aiohttp
+requests
+
+# LangChain ecosystem
+langgraph>=0.2.0
+langchain-core>=0.1.0
+langchain-community>=0.0.20
+langchain-anthropic>=0.1.0
+
+# AI API clients
+openai>=1.0.0
+anthropic>=0.18.0
+
+# Search and utilities
+tavily-python>=0.3.0
+pandas>=2.0.0
+
+# Environment handling
+python-dotenv>=1.0.0
+
+# Type hints
+typing-extensions>=4.5.0
